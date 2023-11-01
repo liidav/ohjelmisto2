@@ -2,7 +2,7 @@ import requests
 
 syote = input("Anna kaupunki: ")
 
-pyynto = f"https://api.openweathermap.org/data/2.5/weather?q={syote}&APPID=0fc357da165151589ffb33d1d79690b1"
+pyynto = f"https://api.openweathermap.org/data/2.5/weather?q={syote}&APPID={APPID}"
 vastaus = requests.get(pyynto).json()
 
 lampotila_c = vastaus["main"]["temp"] - 273.15
